@@ -30,6 +30,10 @@ mongoose.connect(process.env.DATABASE_URL, {
     useFindAndModify: false,
     useCreateIndex: true
 }); 
+//HOME ROUTE========================================
+app.get('/', (req, res) => {
+    res.render('home.ejs');
+});
 
 //INDEX ROUTE========================================
 app.get('/products', (req, res) => {
