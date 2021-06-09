@@ -64,6 +64,9 @@ app.get('/products/new', (req, res) => {
 
 //CREATE ROUTE========================================
 app.post('/products', (req, res) => {
+    if(req.body.img === "") {
+        req.body.img = "https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg"
+    }
     Product.create(req.body, (error, createdProduct) => {
         res.redirect('/products');
     });
