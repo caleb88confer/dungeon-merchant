@@ -18,6 +18,8 @@ app.use(express.urlencoded({extended: false}));
 
 app.use(methodOverride('_method'));
 
+app.use(express.static(__dirname + '/public'));
+
 //CONFIGURE MONGOOSE===================================
 const db = mongoose.connection; // object that represents our connection instance
 //use this to get information about our mongodb connection
