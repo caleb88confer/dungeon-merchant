@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Add New Product</title>
 </head>
 <body>
-    <form action="/products" method="POST">
-        <input type="text" placeholder="name" name="name" /> <br>
-        <input type="text" placeholder="description" name="description" /> <br>
-        <input type="text" placeholder="Image URL" name="img" /> <br>
-        <input type="number" placeholder="weight in lbs" name="weight"/><br>
+    <h1>Add New Product</h1>
+    <form action="/products" method="POST" class="newForm">
+        <input type="text" placeholder="name" name="name" class="input" /> <br>
+        <input type="text" placeholder="description" name="description" class="input" /> <br>
+        <input type="text" placeholder="Image URL" name="img" class="input" /> <br>
+        <input type="number" placeholder="weight in lbs" name="weight" class="input"/><br>
         <input type="number" placeholder="price in gold
-        " name="price"/><br>
-        <input type="number" placeholder="quantity" name="qty"/><br>
-        <input type="submit" value="Add Product"/>
+        " name="price" class="input"/><br>
+        <input type="number" placeholder="quantity" name="qty" class="input"/><br>
+        <input type="submit" value="Add Product" class="btn"/>
     </form>
-    
+    <footer>
+        <a href="/products" class="btn" id="back">Back to all products</a>
+    </footer>
 </body>
 </html>

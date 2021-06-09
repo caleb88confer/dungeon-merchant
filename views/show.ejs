@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Show Product</title>
 </head>
 <body>
+    <header>
     <nav>
-        <a href="/products">Back to all products</a>
+        <a href="/products" class="btn" id="back">Back to all products</a>
     </nav>
-    <h1><%=product.name%></h1>
+    <h1 class="showH1"><%=product.name%></h1>
+</header>
+    <div class="main">
+        <h2>Price- <%=product.price%> Gold pieces</h2>
+        <h2>Weight- <%=product.weight%> lbs</h2>
+        <h2>Units in stock- <%=product.qty%></h2>
+        <img src="<%=product.img%>" class="showImg"/>
+        <p><%=product.description%></p>
 
+    </div>
 
     <footer>
         <form action="/products/<%=product._id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete this product">
-            <a href="/products/<%=product._id%>/edit">Edit Product</a>
+            <input type="submit" value="Delete this product" class="btn">
+            <a href="/products/<%=product._id%>/edit" class="btn">Edit Product</a>
 
         </form>
     </footer>
