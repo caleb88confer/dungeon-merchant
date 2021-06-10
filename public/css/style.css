@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     box-shadow: inset 0 0 25px white;
     background: 
@@ -17,9 +17,10 @@ body {
   }
   header {
       display: flex;
+      align-self: flex-start;
       width: 100%;
-      justify-content: space-between;
-      flex-direction: row-reverse;
+      justify-content: center;
+      border: 1px solid red;
   }
   .main {
       display: flex;
@@ -31,20 +32,39 @@ body {
       font-family: Kaushan Script;
   }
 
-.imgContainer{
-    width: 600px;
+ .productsContainer{
+     height: 620px;
+     width: 350px;
+    /* max-width: 50%; */
+    /* max-height: 75%; */
+    overflow: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    border: 1px solid greenyellow; 
+ 
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 350px;
+    height: 500px;
+ border: 1px solid red;
 
 }
 
 img {
-    max-height: 200px;
-    max-width: 200px;
-    clip-path: circle();
-    border: 1px solid black;
     align-self: center;
+    max-height: 100%;
+    width: 100%;
+    transition-duration: 0.3s;
+    clip-path: circle(100px);
+    margin: auto;
+}
+img:hover {
+    clip-path: circle(50%);
 }
 .showImg {
     max-width: 400px;
@@ -57,6 +77,7 @@ h1 {
     color: white;
     font-family: Kaushan Script;
     text-shadow: 2px 2px 6px #e80957, 0 0 15px rgb(255, 140, 0);
+    font-size: 30px;
 }
 h2 {
     color: white;
@@ -68,27 +89,37 @@ p {
     font-family: Kaushan Script;
 
 }
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid red;
+    align-self: flex-start;
+}
 .showH1 {
     margin: auto;
 }
 
-.add {
-    text-decoration: none;
-    border: 2px solid white;
-    padding: 5px;
-    color: white;
-    font-family: Kaushan Script;
-    background: ButtonFace; color: ButtonText;
 
-}
 .btn {
     text-decoration: none;
     border: 2px solid white;
     padding: 5px;
     color: white;
     font-family: Kaushan Script;
-    background: ButtonFace; color: ButtonText;
+   transition-duration: 0.3s;
+   
 }
+#addNew {
+    margin: 50px;
+    align-self: center;
+}
+.btn:hover {
+    background-color: rgba(153, 139, 133, 0.434);
+
+    color:rgb(255, 140, 0)
+}
+
 #back {
     margin-right: 20px;
 }
@@ -103,4 +134,26 @@ p {
     box-shadow:0 0 15px 4px rgb(0, 0, 0);
     border-radius: 10px;
 
+}
+.submit {
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 4px;
+    font-size: 16px;
+    color: white;
+    font-family: Kaushan Script;
+   transition-duration: 0.4s;
+   background: none;
+}
+#delete:hover{
+    border-color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+}
+#edit:hover {
+    border-color: rgb(65, 209, 225);
+    color: rgb(65, 209, 225);
+}
+#add:hover {
+    border-color: greenyellow;
+    color: greenyellow;
 }

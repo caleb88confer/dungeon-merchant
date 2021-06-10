@@ -10,15 +10,21 @@
     <title>Product Index Page</title>
 </head>
 <body>
-    <h1>Dungeon Merchant Products</h1>
+    <header>
+        <h1>Dungeon Merchant Products</h1>
+    </header>
 
-    <div class="imgContainer">
+    <div class="productsContainer">
         <% products.forEach(product => { %>
+            <div class="container">
             <a href="/products/<%=product._id%>" alt="<%=product.name%>"><img src="<%=product.img%>"></a>
+            <!-- <p id="productName"><%=product.name%></p> -->
+        </div>
         <% }) %>
+    
     </div>
     
-            <footer><a href="/products/new" class="add">Add new product</a></footer>
+            <footer><a href="/products/new" class="btn" id="addNew">Add new product</a></footer>
 
     
 </body>
