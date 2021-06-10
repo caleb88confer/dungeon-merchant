@@ -26,10 +26,16 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      width: 600px;
+      overflow: scroll;
+      width: 100%;
       height: 600px;
+      margin-top: 50px;
       color: white
       font-family: Kaushan Script;
+      border: 1px solid red;
+  }
+  .main::-webkit-scrollbar {
+      display: none;
   }
 
  .productsContainer{
@@ -88,9 +94,8 @@ height: 100%;
 }
 
 .showImg {
-    max-width: 400px;
-    max-height: 400px;
-    margin-bottom: 50px;
+    max-width: 150px;
+    max-height: 200px;
 
 }
 
@@ -114,8 +119,9 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 40px;
     /* border: 1px solid red; */
-    align-self: flex-start;
+    align-self: flex-end;
 }
 .showH1 {
     margin: auto;

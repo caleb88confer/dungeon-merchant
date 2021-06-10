@@ -27,9 +27,12 @@
 
     <footer>
         <form action="/products/<%=product._id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete this product" class="btn">
-            <a href="/products/<%=product._id%>/edit" class="btn">Edit Product</a>
+            <input type="submit" value="Delete this product" class="submit" id="delete">
+            <a href="/products/<%=product._id%>/edit" class="btn" >Edit Product</a>
 
+        </form>
+        <form action="/products/<%=product._id%>/buy?_method=PUT" method="POST">
+            <input type="submit" value="Buy this product" class="submit" id="buy">
         </form>
     </footer>
     
