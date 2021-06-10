@@ -16,10 +16,13 @@
 
     <div class="productsContainer">
         <% products.forEach(product => { %>
-            <div class="container">
+            <div class="productContainer">
+            <div class="imgcontainer">
             <a href="/products/<%=product._id%>" alt="<%=product.name%>"><img src="<%=product.img%>"></a>
-            <!-- <p id="productName"><%=product.name%></p> -->
         </div>
+            <p id="productName">show <%=product.name%> info</p>
+        </div>
+        
         <% }) %>
     
     </div>
